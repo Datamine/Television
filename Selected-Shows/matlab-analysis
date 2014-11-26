@@ -1,0 +1,17 @@
+% John Loeber | MATLAB R2014b, V9.0 | Debian Linux | November 4, 2014
+
+% Remember: results files need to be in a special format! Use dictoresults.py.
+% Should be e.g. "1950, 0.2582258\n1951, 0.7777777777" etc.
+
+M = importdata(NAME OF YOUR RESULTS FILE HERE);
+R = M(:,2); 
+Y = M(:,1);
+scatter(Y,R,'x')
+title('Television _______ Index')
+xlabel('Year')
+ylabel('Weighted Representation over Total Words')
+hold on;                                                                                                                                                                                             
+h = lsline;                                                                                                                                                                                          
+set(h,'color','r')
+
+% You can swap out the year for the episode number to easily arrive at the Seinfeld example from the documentation.
